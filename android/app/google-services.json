@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "391788092328",
+    "project_id": "message-bird-f41ea",
+    "storage_bucket": "message-bird-f41ea.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:391788092328:android:fb8a05b535f2a483d61b9d",
+        "android_client_info": {
+          "package_name": "com.sarthak.flutter_message_bird"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "391788092328-1cva3fpif7tmf858jt1o3092gq528bbe.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sarthak.flutter_message_bird",
+            "certificate_hash": "279d5a715089da5d7c8371946b81b1e45c498655"
+          }
+        },
+        {
+          "client_id": "391788092328-b7a18oqkchnhr26moksv221a1840laog.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2AQ2E3u_DvgM4p6CGGth_m20kIagfTg4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "391788092328-b7a18oqkchnhr26moksv221a1840laog.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

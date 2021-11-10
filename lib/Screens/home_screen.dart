@@ -3,6 +3,7 @@ import 'package:flutter/painting.dart';
 import 'package:flutter_message_bird/API/google_auth_api.dart';
 import 'package:flutter_message_bird/API/send_bird_api.dart';
 import 'package:flutter_message_bird/Providers/user_data.dart';
+import 'package:flutter_message_bird/Screens/all_users_contacts_screen.dart';
 import 'package:flutter_message_bird/Screens/chat_screen.dart';
 import 'package:flutter_message_bird/users.dart';
 import 'package:provider/provider.dart';
@@ -39,6 +40,19 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           )
         ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: const Color(0xff545AEA),
+        onPressed: () {
+          //Fetch Contacts
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (_) => const ContactsScreen(),
+            ),
+          );
+        },
+        child: const Icon(Icons.chat),
       ),
       body: Center(
         child: ListView.builder(

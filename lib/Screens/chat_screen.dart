@@ -31,7 +31,7 @@ class _ChatScreenState extends State<ChatScreen> with ChannelEventHandler {
   @override
   void initState() {
     super.initState();
-    Future.delayed(Duration(seconds: 0), () {
+    Future.delayed(const Duration(seconds: 0), () {
       setupChannel(widget.otherUserID!);
     });
   }

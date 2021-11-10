@@ -1,12 +1,23 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_message_bird/API/google_auth_api.dart';
+import 'package:flutter_message_bird/API/send_bird_api.dart';
 import 'package:flutter_message_bird/shared_widgets.dart';
 
 import 'home_screen.dart';
 
-class LoginScreen extends StatelessWidget {
+class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
+
+  @override
+  State<LoginScreen> createState() => _LoginScreenState();
+}
+
+class _LoginScreenState extends State<LoginScreen> {
+  @override
+  void initState() {
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -38,6 +49,7 @@ class LoginScreen extends StatelessWidget {
                 if (isVerified) {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (_) => const HomeScreen()));
+                  SendGridAPI().connectUserToSendBirdServer(context);
                 }
               },
               style: ButtonStyle(

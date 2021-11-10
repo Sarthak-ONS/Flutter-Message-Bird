@@ -1,4 +1,7 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_message_bird/Providers/user_data.dart';
+import 'package:flutter_message_bird/Screens/login_screen.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:provider/provider.dart';
 
@@ -13,16 +16,29 @@ class GoogleSignInApi {
         print(account.displayName);
         print(account.email);
         print(account.photoUrl);
+        print(account.id);
         Provider.of<UserData>(context, listen: false).changeUserDetails(
-          account.displayName,
-          account.email,
-          auth.accessToken,
-          account.photoUrl,
-        );
+            account.displayName,
+            account.email,
+            auth.accessToken,
+            account.photoUrl,
+            account.id);
         return true;
       } else {
         return false;
       }
+    } catch (e) {
+      print(e);
+    }
+  }
+
+  Future signout(context) async {
+    try {
+      _googleSignIn.signOut();
+      Navigator.pushAndRemoveUntil(
+          context,
+          MaterialPageRoute(builder: (_) => const LoginScreen()),
+          (route) => false);
     } catch (e) {
       print(e);
     }

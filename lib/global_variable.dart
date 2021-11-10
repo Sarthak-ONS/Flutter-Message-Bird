@@ -1,1 +1,1 @@
-const sendBirdAppID = "";
+const sendBirdAppID = "E85B2D6C-FFA6-49D6-AEE1-5DD7AA6BFEAD";
